@@ -46,6 +46,10 @@ func evaluateExpression(input string) string {
 			var left, right int
 			var err error
 
+			if left == 0 || right == 0 {
+				panic("0 не может быть операндом")
+			}
+			
 			if leftIsRoman {
 				left, err = romanToInt(leftStr)
 				if err != nil {
