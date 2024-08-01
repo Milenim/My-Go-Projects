@@ -134,8 +134,8 @@ func romanToInt(s string) (int, error) {
 }
 
 func intToRoman(num int) string {
-	val := []int{10, 9, 5, 4, 1}
-	sym := []string{"X", "IX", "V", "IV", "I"}
+	val := []int{100, 50, 40, 10, 9, 5, 4, 1}
+	sym := []string{"C", "L", "XL", "X", "IX", "V", "IV", "I"}
 
 	var result strings.Builder
 	for i := 0; i < len(val); i++ {
