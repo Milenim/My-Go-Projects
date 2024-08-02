@@ -45,10 +45,6 @@ func evaluateExpression(input string) string {
 
 			var left, right int
 			var err error
-
-			if left == 0 || right == 0 {
-				panic("0 не может быть операндом")
-			}
 			
 			if leftIsRoman {
 				left, err = romanToInt(leftStr)
@@ -73,7 +69,11 @@ func evaluateExpression(input string) string {
 			if left > 10 || right > 10 {
 				panic("числа не должны быть больше 10")
 			}
-
+			
+			if left == 0 || right == 0 {
+				panic("0 не может быть операндом")
+			}
+			
 			var result int
 			switch operator {
 			case "+":
